@@ -13,7 +13,7 @@ http://flipflop.stg.konabackend.com
 ```
 
 
-# Basic
+#Basic filters
 
 All the API (/resource, /resource/:id, /resource/find-one have this features
 
@@ -90,7 +90,7 @@ GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=
 
 ### Request
 
-```
+```js
 POST /users HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
