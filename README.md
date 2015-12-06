@@ -88,7 +88,6 @@ GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=
 
 ## Register with email
 
-### Request
 
 ```js
 POST /users HTTP/1.1
@@ -101,8 +100,6 @@ Cache-Control: no-cache
    "password":"****"
 }
 ```
-
-### Response
 
 ```js
 {
@@ -118,7 +115,7 @@ Cache-Control: no-cache
 
 ## Register/Login with Facebook
 
-### Request
+Request
 
 ```js
 POST /users/login-with-facebook HTTP/1.1
@@ -131,7 +128,7 @@ Cache-Control: no-cache
 
 ```
 
-### Response
+Response
 
 ```js
 {
@@ -155,8 +152,6 @@ Cache-Control: no-cache
 
 ## Login with email
 
-### Request
-
 ```js
 POST /users/login
 Host: flipflop.dev.konabackend.com
@@ -170,7 +165,7 @@ Cache-Control: no-cache
 
 ```
 
-### Response
+Response
 
 ```js
 {
@@ -216,7 +211,6 @@ Cache-Control: no-cache
 
 ## Upload profile Picture
 
-### Request
 
 ```js
 POST /bucket HTTP/1.1
@@ -231,7 +225,7 @@ Content-Type: image/png
 ----WebKitFormBoundaryE19zNvXGzXaLvS5C
 ```
 
-### Response
+  Response
 
 ```js
 {
@@ -241,14 +235,13 @@ Content-Type: image/png
 
 ## Get places from google
 
-### Request
 
 ```
 GET /maps/api/place/textsearch/json?key=AIzaSyDJsKQ25-BKRG4EetV0SIrQep6DYA_dPR0&query=montevideo HTTP/1.1
 Host: maps.googleapis.com
 ```
 
-### Response
+
 
 ```js
 {
@@ -289,13 +282,13 @@ Host: maps.googleapis.com
 
 ## Find country from place_id
 
-### Request
+  Request
 
 ```
 GET https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDJsKQ25-BKRG4EetV0SIrQep6DYA_dPR0&placeid=ChIJ0_c7xv-An5URmexbNS4bMms
 ```
 
-### Response
+  Response
 ```js
 {
     "html_attributions": [],
@@ -380,7 +373,7 @@ Host: flipflop.dev.konabackend.com
 
 ## Update profile with photo, birthPlace,Birthday and gender
 
-### Request
+  Request
 
 ```js
 PUT /users HTTP/1.1
@@ -406,7 +399,7 @@ Cache-Control: no-cache
 
 ## Get interests
 
-### Request
+  Request
 
 ```js
 GET /interests HTTP/1.1
@@ -414,7 +407,7 @@ Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -434,7 +427,7 @@ Cache-Control: no-cache
 
 ## Get countries list
 
-### Request
+  Request
 
 ```js
 GET /countries HTTP/1.1
@@ -442,7 +435,7 @@ Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -464,7 +457,7 @@ Actual status posible values
 - WORK_AND_TRAVEL
 - VACATIONS
 
-### Request
+  Request
 
 ```js
 PUT /users HTTP/1.1
@@ -496,7 +489,7 @@ Cache-Control: no-cache
 
 ## List hostels
 
-### Request
+  Request
 
 ```js
 GET /hostels HTTP/1.1
@@ -505,7 +498,7 @@ Content-Type: application/json
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -530,7 +523,7 @@ Cache-Control: no-cache
 
 ## Set current hostel
 
-### Request
+  Request
 
 ```js
 PUT /users HTTP/1.1
@@ -546,7 +539,7 @@ Cache-Control: no-cache
 
 ## Set current position
 
-### Request
+  Request
 
 ```js
 PUT /users HTTP/1.1
@@ -590,7 +583,7 @@ Cache-Control: no-cache
 ![Screen_Shot_2015-11-28_at_18.31.51](http://git.teamkona.io/whatson/backend/uploads/45f418cb91d84852ced3911531a34ea0/Screen_Shot_2015-11-28_at_18.31.51.png)
 
 
-### Request
+  Request
 
 ```js
 GET /locations HTTP/1.1
@@ -599,7 +592,7 @@ Content-Type: application/json
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -748,7 +741,7 @@ Content-Type: application/json
 ## Get events
 
 
-### Request
+  Request
 
 ```js
 GET /events HTTP/1.1
@@ -757,7 +750,7 @@ Content-Type: application/json
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [  
@@ -851,7 +844,7 @@ Cache-Control: no-cache
 
 ## Create Plan (Event)
 
-### Request
+  Request
 
 ```js
 POST /plans HTTP/1.1
@@ -861,15 +854,15 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 
 {
-	"meetingTime" : "20:00",
-	"meetingPoint" : "Hostel Bar",
-	"event" : "565cfa8dc2e649e9dbb29894"
+  "meetingTime" : "20:00",
+  "meetingPoint" : "Hostel Bar",
+  "event" : "565cfa8dc2e649e9dbb29894"
 }
 ```
 
 ## Create Plan (Location)
 
-### Request
+  Request
 
 ```js
 POST /plans HTTP/1.1
@@ -879,9 +872,9 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 
 {
-	"meetingTime" : "20:00",
-	"meetingPoint" : "Hostel Bar",
-	"location" : "565f3027f386ddd84bf764b4"
+  "meetingTime" : "20:00",
+  "meetingPoint" : "Hostel Bar",
+  "location" : "565f3027f386ddd84bf764b4"
 }
 ```
 
@@ -895,7 +888,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 ```
 
-###Response
+ Response
 
 ```
 [
@@ -932,7 +925,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -1083,7 +1076,7 @@ deviceType values:
 
 ## Get users in Current Hostel
 
-### Request
+  Request
 
 ```js
 GET /users/current-hostel HTTP/1.1
@@ -1093,7 +1086,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -1117,7 +1110,7 @@ GET /phrases HTTP/1.1
 Host: flipflop.dev.konabackend.com
 ```
 
-### Response
+  Response
 
 ```js
 [  
@@ -1139,7 +1132,7 @@ Host: flipflop.dev.konabackend.com
 ## Send message
 
 
-### Send phrase
+  Send phrase
 
 ```js
 POST /messages HTTP/1.1
@@ -1154,7 +1147,7 @@ Cache-Control: no-cache
 }
 ```
 
-### Send emoticon
+  Send emoticon
 
 ```js
 POST /messages HTTP/1.1
@@ -1169,7 +1162,7 @@ Cache-Control: no-cache
 }
 ```
 
-### Send event
+  Send event
 
 ```js
 POST /messages HTTP/1.1
@@ -1184,7 +1177,7 @@ Cache-Control: no-cache
 }
 ```
 
-### Send location
+  Send location
 
 ```js
 POST /messages HTTP/1.1
@@ -1199,7 +1192,7 @@ Cache-Control: no-cache
 }
 ```
 
-### Response
+  Response
 
 ```js
 {
@@ -1212,7 +1205,7 @@ Cache-Control: no-cache
 
 ## Get my conversations
 
-### Request
+  Request
 
 ```js
 GET /conversations HTTP/1.1
@@ -1223,7 +1216,7 @@ Cache-Control: no-cache
 
 ```
 
-### Response
+  Response
 
 ```js
 [
@@ -1266,7 +1259,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 ```
 
-### Response
+  Response
 
 ```js
 [
