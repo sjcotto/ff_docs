@@ -4,13 +4,13 @@
 
 **Dev**
 
-```
+```js
 http://flipflop.dev.konabackend.com
 ```
 
 **Stg**
 
-```
+```js
 http://flipflop.stg.konabackend.com
 ```
 
@@ -48,7 +48,7 @@ GET /locations
 
 Find
 
-```
+```js
 GET /locations?where[category]=5659f53b6388abeba14bc875
 ```
 
@@ -56,13 +56,13 @@ GET /locations?where[category]=5659f53b6388abeba14bc875
 
 Project fields
 
-```
+```js
 GET /locations?select[name]=1
 ```
 
 Using multiple conditions
 
-```
+```js
 GET /locations?select[name]=1&where[category]=5659f53b6388abeba14bc875
 ```
 
@@ -70,11 +70,11 @@ GET /locations?select[name]=1&where[category]=5659f53b6388abeba14bc875
 
 Sorting by field
 
-```
+```js
 GET /locations?sort[_updatedAt]=1
 ```
 
-```
+```js
 GET /locations?sort[_updatedAt]=-1
 ```
 
@@ -82,7 +82,7 @@ GET /locations?sort[_updatedAt]=-1
 
 Populate model reference
 
-```
+```js
 GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=city
 ```
 
