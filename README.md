@@ -13,7 +13,7 @@ http://flipflop.stg.konabackend.com
 ```
 
 
-#Basic filters
+**Basic filters**
 
 All the API (/resource, /resource/:id, /resource/find-one have this features
 
@@ -42,7 +42,7 @@ GET /locations
 ]  
 ```
 
-## Where
+**Where**
 
 Find
 
@@ -50,7 +50,7 @@ Find
 GET /locations?where[category]=5659f53b6388abeba14bc875
 ```
 
-## Select
+**Select**
 
 Project fields
 
@@ -64,7 +64,7 @@ Using multiple conditions
 GET /locations?select[name]=1&where[category]=5659f53b6388abeba14bc875
 ```
 
-## Sort
+**Sort**
 
 Sorting by field
 
@@ -76,7 +76,7 @@ GET /locations?sort[_updatedAt]=1
 GET /locations?sort[_updatedAt]=-1
 ```
 
-## Populate
+**Populate**
 
 Populate model reference
 
@@ -104,7 +104,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 {
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfX3YiOjAsImVtYWlsIjoic2FudGlhZ29Aa29uYWNsb3VkLmlvIiwiX2lkIjoiNTY1NjkzMzQ5NTRmNzUyMTIyMzFhZDQxIiwiZmF2b3VyaXRlUmVjb21tZW5kZWQiOltdLCJmYXZvdXJpdGVFdmVudHMiOltdLCJpbnRlcmVzdHMiOltdLCJjb3VudHJpZXNWaXNpdGVkIjpbXSwiY291bnRyaWVzVG9WaXNpdCI6W10sImRlc2NyaXB0aW9uIjpbXSwiY3VycmVudFBvc2l0aW9uIjpbXSwicHJvZmlsZVBob3RvcyI6W119.wtknVCA1ykQ7q0261TZyahgUqZ15hbDwtExcuyh75vY",
     "user": {
@@ -120,7 +120,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 POST /users/login-with-facebook HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -133,7 +133,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 {
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2YWYyZDQwNDQ3YThjNGRlZDE4NWMiLCJlbWFpbCI6IjE2MjEyMzQ2MjRAZmFjZWJvb2suY29tIiwiZmFjZWJvb2tJZCI6IjE2MjEyMzQ2MjQiLCJfX3YiOjAsImZhdm91cml0ZVJlY29tbWVuZGVkIjpbXSwiZmF2b3VyaXRlRXZlbnRzIjpbXSwiaW50ZXJlc3RzIjpbXSwiY291bnRyaWVzVmlzaXRlZCI6W10sImNvdW50cmllc1RvVmlzaXQiOltdLCJkZXNjcmlwdGlvbiI6W10sImN1cnJlbnRQb3NpdGlvbiI6W10sInByb2ZpbGVQaG90b3MiOltdfQ.DLOTq39xPY8ibEEjCMRSaEVcRJ3nI4xPBL9DxWE0ufo",
     "user": {
@@ -157,7 +157,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 POST /users/login
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -172,7 +172,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 {
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzNDk1NGY3NTIxMjIzMWFkNDEiLCJlbWFpbCI6InNhbnRpYWdvQGtvbmFjbG91ZC5pbyIsIl9fdiI6MCwiYmlydGhQbGFjZSI6eyJuYW1lIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsImNvdW50cnlDb2RlIjoiVVkifSwicHJvZmlsZUltYWdlVXJsIjoiYnVja2V0LzU2NTY5NTlhZjY2MDE0N2UzNGQxYmE0ZSIsImJpcnRoZGF5IjoiMTk4OS0wNi0yMFQwMDowMDowMC4wMDBaIiwiY3VycmVudFBsYWNlIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsInN0YXR1cyI6IlZBQ0FUSU9OUyIsImZhdm91cml0ZVJlY29tbWVuZGVkIjpbXSwiZmF2b3VyaXRlRXZlbnRzIjpbXSwiaW50ZXJlc3RzIjpbIjU2NTY2ZWI5YmVlODgyMTgzYzE3NTA3MCIsIjU2NTY2ZThiYmVlODgyMTgzYzE3NTA2ZSIsIjU2NTY2ZTViYmVlODgyMTgzYzE3NTA2NiJdLCJjb3VudHJpZXNWaXNpdGVkIjpbIjU2NTY2MGUxYmU5NzQzYTk0OThlZGQ2MyJdLCJjb3VudHJpZXNUb1Zpc2l0IjpbIjU2NTY2MGI4YmU5NzQzYTk0OThlZGQ2MCJdLCJkZXNjcmlwdGlvbiI6WyJTb21lIGRlc2NyaXB0aW9uIGFib3V0IG1lIl0sImN1cnJlbnRQb3NpdGlvbiI6W10sInByb2ZpbGVQaG90b3MiOltdfQ.VhtO-POeXVlbVjUvAdPjLy5pstcU_D2LBf5GkplWyag",
     "user": {
@@ -218,7 +218,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 POST /bucket HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
@@ -233,7 +233,7 @@ Content-Type: image/png
 
 ### Response
 
-```
+```js
 {
     "url": "bucket/565693f5a6f070c027a15bb3"
 }
@@ -250,7 +250,7 @@ Host: maps.googleapis.com
 
 ### Response
 
-```
+```js
 {
     "html_attributions": [],
     "results": [
@@ -296,7 +296,7 @@ GET https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDJsKQ25-BK
 ```
 
 ### Response
-```
+```js
 {
     "html_attributions": [],
     "result": {
@@ -364,7 +364,7 @@ GET https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDJsKQ25-BK
 
 ## Show country from by country ID
 
-```
+```js
 GET /flags/:countryId.png
 Host: flipflop.dev.konabackend.com
 ```
@@ -373,7 +373,7 @@ Host: flipflop.dev.konabackend.com
 
 Example
 
-```
+```js
 GET /flags/uy.png
 Host: flipflop.dev.konabackend.com
 ```
@@ -382,7 +382,7 @@ Host: flipflop.dev.konabackend.com
 
 ### Request
 
-```
+```js
 PUT /users HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -408,7 +408,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 GET /interests HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
@@ -416,7 +416,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "56566eb9bee882183c175070",
@@ -436,7 +436,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 GET /countries HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
@@ -444,7 +444,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "5656612f083a63804d6f18e5",
@@ -466,7 +466,7 @@ Actual status posible values
 
 ### Request
 
-```
+```js
 PUT /users HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -498,7 +498,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 GET /hostels HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -507,7 +507,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     { 
     "_id" : ObjectId("5656b549bee882183c175076"), 
@@ -532,7 +532,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 PUT /users HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -542,14 +542,13 @@ Cache-Control: no-cache
 { 
   "currentHostel" : "5656b549bee882183c175076"
 }
-
 ```
 
 ## Set current position
 
 ### Request
 
-```
+```js
 PUT /users HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -566,7 +565,7 @@ Cache-Control: no-cache
 
 ## Request
 
-```
+```js
 GET /home HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -576,7 +575,7 @@ Cache-Control: no-cache
 
 ## Respose
 
-```
+```js
 {
     "plans": 0,
     "events": 3,
@@ -593,7 +592,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 GET /locations HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -602,7 +601,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "565a15c01cfb29af65c182c2",
@@ -732,7 +731,7 @@ Cache-Control: no-cache
 
 ## Get all location attributes
 
-```
+```js
 GET /locations HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -740,7 +739,7 @@ Content-Type: application/json
 
 ## Get one location by id
 
-```
+```js
 GET /locations/:id HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -751,7 +750,7 @@ Content-Type: application/json
 
 ### Request
 
-```
+```js
 GET /events HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -760,7 +759,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [  
    {  
       "_id":"565cfa8dc2e649e9dbb29894",
@@ -854,7 +853,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 POST /plans HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -872,7 +871,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 POST /plans HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -888,7 +887,7 @@ Cache-Control: no-cache
 
 ## Get plans
 
-```
+```js
 GET /plans HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -925,7 +924,7 @@ Cache-Control: no-cache
 
 ## Get plans populating events and locations
 
-```
+```js
 GET /plans?populate[]=location&populate[]=event HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -935,7 +934,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "56633e599f652d58063c0b85",
@@ -1061,7 +1060,7 @@ IOS and android deviceId/registerId -> Push Notification
 
 ## Request
 
-```
+```js
 POST /devices HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1086,7 +1085,7 @@ deviceType values:
 
 ### Request
 
-```
+```js
 GET /users/current-hostel HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1096,7 +1095,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "56569334954f75212231ad41",
@@ -1120,7 +1119,7 @@ Host: flipflop.dev.konabackend.com
 
 ### Response
 
-```
+```js
 [  
    {  
       _id:"566223d73f6ee968b8cb7983",
@@ -1142,7 +1141,7 @@ Host: flipflop.dev.konabackend.com
 
 ### Send phrase
 
-```
+```js
 POST /messages HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1157,7 +1156,7 @@ Cache-Control: no-cache
 
 ### Send emoticon
 
-```
+```js
 POST /messages HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1172,7 +1171,7 @@ Cache-Control: no-cache
 
 ### Send event
 
-```
+```js
 POST /messages HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1187,7 +1186,7 @@ Cache-Control: no-cache
 
 ### Send location
 
-```
+```js
 POST /messages HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1202,7 +1201,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 {
     "_id": "5660cc4031cee6f980b97f38",
     "_createdAt": "2015-12-03T23:12:00.706Z",
@@ -1215,7 +1214,7 @@ Cache-Control: no-cache
 
 ### Request
 
-```
+```js
 GET /conversations HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1226,7 +1225,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "5660cc1631cee6f980b97f36",
@@ -1259,7 +1258,7 @@ Cache-Control: no-cache
 
 ## Get one conversation
 
-```
+```js
 GET /conversations/5660cc1631cee6f980b97f36 HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1269,7 +1268,7 @@ Cache-Control: no-cache
 
 ### Response
 
-```
+```js
 [
     {
         "_id": "5660cc4031cee6f980b97f38",
