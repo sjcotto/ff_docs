@@ -558,8 +558,6 @@ Cache-Control: no-cache
 
 ## Home
 
-### Request
-
 ```js
 GET /home HTTP/1.1
 Host: flipflop.dev.konabackend.com
