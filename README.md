@@ -1,4 +1,6 @@
-# Endpoints
+# FF APIs
+
+## Endpoints
 
 **Dev**
 
@@ -84,9 +86,9 @@ Populate model reference
 GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=city
 ```
 
-# Register
+## Register
 
-## Register with email
+### Register with email
 
 
 ```js
@@ -113,7 +115,7 @@ Cache-Control: no-cache
 ```
 
 
-## Register/Login with Facebook
+### Register/Login with Facebook
 
 Request
 
@@ -150,7 +152,7 @@ Response
 }
 ```
 
-## Login with email
+### Login with email
 
 ```js
 POST /users/login
@@ -204,12 +206,12 @@ Response
 }
 ```
 
-# SIGN IN PAGE 2
+## SIGN IN PAGE 2
 
 ![Simulator_Screen_Shot_Nov_26__2015__2.39.26_AM](http://git.teamkona.io/whatson/backend/uploads/444661028107404a4da72bc7ddb19b4b/Simulator_Screen_Shot_Nov_26__2015__2.39.26_AM.png)
 
 
-## Upload profile Picture
+### Upload profile Picture
 
 
 ```js
@@ -233,7 +235,7 @@ Content-Type: image/png
 }
 ```
 
-## Get places from google
+### Get places from google
 
 
 ```
@@ -280,7 +282,7 @@ Host: maps.googleapis.com
 }
 ```
 
-## Find country from place_id
+### Find country from place_id
 
   Request
 
@@ -355,7 +357,7 @@ GET https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDJsKQ25-BK
 ```
 
 
-## Show country from by country ID
+### Show country from by country ID
 
 ```js
 GET /flags/:countryId.png
@@ -371,7 +373,7 @@ GET /flags/uy.png
 Host: flipflop.dev.konabackend.com
 ```
 
-## Update profile with photo, birthPlace,Birthday and gender
+### Update profile with photo,etc
 
   Request
 
@@ -393,11 +395,11 @@ Cache-Control: no-cache
 }
 ```
 
-# SIGN IN PAGE 3
+## SIGN IN PAGE 3
 
 ![Simulator_Screen_Shot_Nov_26__2015__2.48.30_AM](http://git.teamkona.io/whatson/backend/uploads/f11f659bc59438c7f44400504d264ee4/Simulator_Screen_Shot_Nov_26__2015__2.48.30_AM.png)
 
-## Get interests
+### Get interests
 
   Request
 
@@ -425,7 +427,7 @@ Cache-Control: no-cache
 ...
 ```
 
-## Get countries list
+### Get countries list
 
   Request
 
@@ -448,7 +450,7 @@ Cache-Control: no-cache
 ...
 ```
 
-## Update profile page 3
+### Update profile page 3
 
 Actual status posible values
 
@@ -484,10 +486,10 @@ Cache-Control: no-cache
 }
 ```
 
-# Set current hostel
+## Set current hostel
 
 
-## List hostels
+### List hostels
 
   Request
 
@@ -521,7 +523,7 @@ Cache-Control: no-cache
 ]
 ```
 
-## Set current hostel
+### Set current hostel
 
   Request
 
@@ -537,7 +539,7 @@ Cache-Control: no-cache
 }
 ```
 
-## Set current position
+### Set current position
 
   Request
 
@@ -554,9 +556,9 @@ Cache-Control: no-cache
 
 ```
 
-# Home
+## Home
 
-## Request
+### Request
 
 ```js
 GET /home HTTP/1.1
@@ -566,7 +568,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 ```
 
-## Respose
+Respose
 
 ```js
 {
@@ -576,9 +578,9 @@ Cache-Control: no-cache
 }
 ```
 
-# Explore
+## Explore
 
-## Get locations
+### Get locations
 
 ![Screen_Shot_2015-11-28_at_18.31.51](http://git.teamkona.io/whatson/backend/uploads/45f418cb91d84852ced3911531a34ea0/Screen_Shot_2015-11-28_at_18.31.51.png)
 
@@ -722,7 +724,7 @@ Cache-Control: no-cache
 ]
 ```
 
-## Get all location attributes
+**Get all location attributes**
 
 ```js
 GET /locations HTTP/1.1
@@ -730,7 +732,7 @@ Host: flipflop.dev.konabackend.com
 Content-Type: application/json
 ```
 
-## Get one location by id
+** Get one location by id**
 
 ```js
 GET /locations/:id HTTP/1.1
@@ -738,7 +740,7 @@ Host: flipflop.dev.konabackend.com
 Content-Type: application/json
 ```
 
-## Get events
+### Get events
 
 
   Request
@@ -842,7 +844,7 @@ Cache-Control: no-cache
 ```
 
 
-## Create Plan (Event)
+### Create Plan (Event)
 
   Request
 
@@ -860,7 +862,7 @@ Cache-Control: no-cache
 }
 ```
 
-## Create Plan (Location)
+### Create Plan (Location)
 
   Request
 
@@ -878,7 +880,7 @@ Cache-Control: no-cache
 }
 ```
 
-## Get plans
+### Get plans
 
 ```js
 GET /plans HTTP/1.1
@@ -915,7 +917,7 @@ Cache-Control: no-cache
 ]
 ```
 
-## Get plans populating events and locations
+### Get plans populating events and locations
 
 ```js
 GET /plans?populate[]=location&populate[]=event HTTP/1.1
@@ -1047,11 +1049,9 @@ Cache-Control: no-cache
 ]
 ```
 
-# Send deviceId
+## Send deviceId
 
 IOS and android deviceId/registerId -> Push Notification
-
-## Request
 
 ```js
 POST /devices HTTP/1.1
@@ -1072,9 +1072,9 @@ deviceType values:
   - ios
 
 
-# IceBrecker
+## IceBrecker
 
-## Get users in Current Hostel
+### Get users in Current Hostel
 
   Request
 
@@ -1103,7 +1103,7 @@ Cache-Control: no-cache
 ]
 ```
 
-## Get phrases
+### Get phrases
 
 ```
 GET /phrases HTTP/1.1
@@ -1129,10 +1129,8 @@ Host: flipflop.dev.konabackend.com
 ...
 ]
 ``` 
-## Send message
 
-
-  Send phrase
+### Send phrase
 
 ```js
 POST /messages HTTP/1.1
@@ -1147,7 +1145,7 @@ Cache-Control: no-cache
 }
 ```
 
-  Send emoticon
+### Send emoticon
 
 ```js
 POST /messages HTTP/1.1
@@ -1162,7 +1160,7 @@ Cache-Control: no-cache
 }
 ```
 
-  Send event
+### Send event
 
 ```js
 POST /messages HTTP/1.1
@@ -1177,7 +1175,7 @@ Cache-Control: no-cache
 }
 ```
 
-  Send location
+### Send location
 
 ```js
 POST /messages HTTP/1.1
@@ -1203,7 +1201,7 @@ Cache-Control: no-cache
 }
 ```
 
-## Get my conversations
+### Get my conversations
 
   Request
 
@@ -1249,7 +1247,7 @@ Cache-Control: no-cache
 ```
 
 
-## Get one conversation
+### Get one conversation
 
 ```js
 GET /conversations/5660cc1631cee6f980b97f36 HTTP/1.1
