@@ -878,7 +878,7 @@ Cache-Control: no-cache
 
 Response
 
-```
+```js
 [
     {
         "_id": "56569334954f75212231ad41",
