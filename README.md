@@ -1,29 +1,23 @@
 # Endpoints
 
-## Dev
+**Dev**
 
 ```
 http://flipflop.dev.konabackend.com
 ```
 
-## Stg
+**Stg**
 
 ```
 http://flipflop.stg.konabackend.com
 ```
 
-## Prod
 
-```
-http://api.appflipflop.com
-```
+# Basic
 
+All the API (/resource, /resource/:id, /resource/find-one have this features
 
-# Base
-
-Todas las Apis en el get de un recurso tienen las funcionalidades.
-
-Ejemplo.
+Example.
 
 ```
 GET /locations
@@ -49,7 +43,7 @@ GET /locations
 
 ## Where
 
-Filtrar la busqueda por un atributo
+Find
 
 ```
 GET /locations?where[category]=5659f53b6388abeba14bc875
@@ -57,13 +51,13 @@ GET /locations?where[category]=5659f53b6388abeba14bc875
 
 ## Select
 
-Proyectar uno o mas atributos
+Project fields
 
 ```
 GET /locations?select[name]=1
 ```
 
-Se pueden mezclar, traer los locations que tienen categoria 5659f53b6388abeba14bc875 y proyectar solo el nombre
+Using multiple conditions
 
 ```
 GET /locations?select[name]=1&where[category]=5659f53b6388abeba14bc875
@@ -71,7 +65,7 @@ GET /locations?select[name]=1&where[category]=5659f53b6388abeba14bc875
 
 ## Sort
 
-Ordenar segun un atributo
+Sorting by field
 
 ```
 GET /locations?sort[_updatedAt]=1
@@ -83,7 +77,7 @@ GET /locations?sort[_updatedAt]=-1
 
 ## Populate
 
-Cuando hay referencias a otros modelos, por ejemplo, paises, ciudades, zonas, se pueden popular las referencias para traer el objeto entero en vez de su id.
+Populate model reference
 
 ```
 GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=city
@@ -214,7 +208,7 @@ Cache-Control: no-cache
 }
 ```
 
-## SIGN IN PAGE 2
+# SIGN IN PAGE 2
 
 ![Simulator_Screen_Shot_Nov_26__2015__2.39.26_AM](http://git.teamkona.io/whatson/backend/uploads/444661028107404a4da72bc7ddb19b4b/Simulator_Screen_Shot_Nov_26__2015__2.39.26_AM.png)
 
@@ -244,22 +238,16 @@ Content-Type: image/png
 }
 ```
 
-### Postman example
+## Get places from google
 
-![Screen_Shot_2015-11-26_at_02.10.30](http://git.teamkona.io/whatson/backend/uploads/48da85da92215e5a2a95e0d29660d276/Screen_Shot_2015-11-26_at_02.10.30.png)
-
-## Update fields
-
-### Get places from google
-
-#### Request
+### Request
 
 ```
 GET /maps/api/place/textsearch/json?key=AIzaSyDJsKQ25-BKRG4EetV0SIrQep6DYA_dPR0&query=montevideo HTTP/1.1
 Host: maps.googleapis.com
 ```
 
-#### Response
+### Response
 
 ```
 {
@@ -298,15 +286,15 @@ Host: maps.googleapis.com
 }
 ```
 
-### Find country from place_id
+## Find country from place_id
 
-#### Request
+### Request
 
 ```
 GET https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDJsKQ25-BKRG4EetV0SIrQep6DYA_dPR0&placeid=ChIJ0_c7xv-An5URmexbNS4bMms
 ```
 
-#### Response
+### Response
 ```
 {
     "html_attributions": [],
@@ -373,7 +361,7 @@ GET https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDJsKQ25-BK
 ```
 
 
-### Show country from by country ID
+## Show country from by country ID
 
 ```
 GET /flags/:countryId.png
@@ -389,9 +377,9 @@ GET /flags/uy.png
 Host: flipflop.dev.konabackend.com
 ```
 
-### Update profile with photo, birthPlace,Birthday and gender
+## Update profile with photo, birthPlace,Birthday and gender
 
-#### Request
+### Request
 
 ```
 PUT /users HTTP/1.1
@@ -411,13 +399,13 @@ Cache-Control: no-cache
 }
 ```
 
-## SIGN IN PAGE 3
+# SIGN IN PAGE 3
 
 ![Simulator_Screen_Shot_Nov_26__2015__2.48.30_AM](http://git.teamkona.io/whatson/backend/uploads/f11f659bc59438c7f44400504d264ee4/Simulator_Screen_Shot_Nov_26__2015__2.48.30_AM.png)
 
-### Get interests
+## Get interests
 
-#### Request
+### Request
 
 ```
 GET /interests HTTP/1.1
@@ -425,7 +413,7 @@ Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
 ```
 
-#### Response
+### Response
 
 ```
 [
@@ -443,9 +431,9 @@ Cache-Control: no-cache
 ...
 ```
 
-### Get countries list
+## Get countries list
 
-#### Request
+### Request
 
 ```
 GET /countries HTTP/1.1
@@ -453,7 +441,7 @@ Host: flipflop.dev.konabackend.com
 Cache-Control: no-cache
 ```
 
-#### Response
+### Response
 
 ```
 [
@@ -466,7 +454,7 @@ Cache-Control: no-cache
 ...
 ```
 
-### Update profile
+## Update profile page 3
 
 Actual status posible values
 
@@ -475,7 +463,7 @@ Actual status posible values
 - WORK_AND_TRAVEL
 - VACATIONS
 
-#### Request
+### Request
 
 ```
 PUT /users HTTP/1.1
@@ -502,7 +490,7 @@ Cache-Control: no-cache
 }
 ```
 
-# Hostel
+# Set current hostel
 
 
 ## List hostels
@@ -572,6 +560,7 @@ Cache-Control: no-cache
 }
 
 ```
+
 # Home
 
 ## Request
@@ -1067,7 +1056,7 @@ Cache-Control: no-cache
 
 # Send deviceId
 
-IOS and android deviceId -> Push Notification
+IOS and android deviceId/registerId -> Push Notification
 
 ## Request
 
@@ -1090,7 +1079,7 @@ deviceType values:
   - ios
 
 
-# IceBreacker
+# IceBrecker
 
 ## Get users in Current Hostel
 
