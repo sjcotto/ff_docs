@@ -19,26 +19,27 @@ All the API (/resource, /resource/:id, /resource/find-one have this features
 
 Example.
 
-```
+```js
 GET /locations
 
 [
-{
-  _id: "565cc4afbbd0214e3c97d85f",
-  _createdAt: "2015-11-30T21:50:39.394Z",
-  _updatedAt: "2015-11-30T21:50:39.394Z",
-  name: "Oficina",
-  address: "benito blanco 1030",
-  creditCard: true,
-  english: false,
-  age: "ALL",
-  category: "5659f53b6388abeba14bc875",
-  description: "Some bar",
-  website: "office.com",
-  country: "565660b8be9743a9498edd60",
-  city: "5656b4d1bee882183c175072",
-  zone: "565bbc9c3f6ad1fc51a7bfb3",
-
+  {
+    _id: "565cc4afbbd0214e3c97d85f",
+    _createdAt: "2015-11-30T21:50:39.394Z",
+    _updatedAt: "2015-11-30T21:50:39.394Z",
+    name: "Oficina",
+    address: "benito blanco 1030",
+    creditCard: true,
+    english: false,
+    age: "ALL",
+    category: "5659f53b6388abeba14bc875",
+    description: "Some bar",
+    website: "office.com",
+    country: "565660b8be9743a9498edd60",
+    city: "5656b4d1bee882183c175072",
+    zone: "565bbc9c3f6ad1fc51a7bfb3"  
+  }
+]  
 ```
 
 ## Where
