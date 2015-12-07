@@ -728,7 +728,7 @@ Cache-Control: no-cache
 ]
 ```
 
-### Get all location attributes**
+### Get all location attributes
 
 ```js
 GET /locations HTTP/1.1
