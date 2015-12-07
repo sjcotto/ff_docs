@@ -94,7 +94,7 @@ Add qs offset limit
 GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=city?offset=0&limit=10
 ```
 
-## Register
+## SIGN IN PAGE 1
 
 ### Register with email
 
