@@ -972,7 +972,7 @@ Cache-Control: no-cache
 ]
 ```
 
-### Get plans populating events and locations
+### Get plans populating references
 
 ```js
 GET /plans?populate[]=location&populate[]=event HTTP/1.1
@@ -1164,7 +1164,10 @@ Response
 ]
 ```
 
-## Send deviceId
+
+## IceBrecker
+
+### Send deviceId
 
 IOS and android deviceId/registerId -> Push Notification
 
@@ -1185,10 +1188,7 @@ Cache-Control: no-cache
 deviceType values:
   - android
   - ios
-
-
-## IceBrecker
-
+  - 
 ### Get users in Current Hostel
 
   Request
