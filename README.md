@@ -86,6 +86,14 @@ Populate model reference
 GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=city
 ```
 
+**Pagination**
+
+Add qs offset limit
+
+```js
+GET locations?populate[]=category&populate[]=zone&populate[]=country&populate[]=city?offset=0&limit=10
+```
+
 ## Register
 
 ### Register with email
