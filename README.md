@@ -1370,13 +1370,57 @@ Cache-Control: no-cache
 ```
 
 
-### Get one conversation
+### Get Conversation by ConversationId
 
 ```js
 GET /conversations/5660cc1631cee6f980b97f36 HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzNDk1NGY3NTIxMjIzMWFkNDEiLCJlbWFpbCI6InNhbnRpYWdvQGtvbmFjbG91ZC5pbyIsIl9fdiI6MCwiYmlydGhQbGFjZSI6eyJuYW1lIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsImNvdW50cnlDb2RlIjoiVVkifSwicHJvZmlsZUltYWdlVXJsIjoiYnVja2V0LzU2NTY5NTlhZjY2MDE0N2UzNGQxYmE0ZSIsImJpcnRoZGF5IjoiMTk4OS0wNi0yMFQwMDowMDowMC4wMDBaIiwiY3VycmVudFBsYWNlIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsInN0YXR1cyI6IlZBQ0FUSU9OUyIsImN1cnJlbnRIb3N0ZWwiOiI1NjU2YjU0OWJlZTg4MjE4M2MxNzUwNzYiLCJmYXZvdXJpdGVSZWNvbW1lbmRlZCI6W10sImZhdm91cml0ZUV2ZW50cyI6W10sImludGVyZXN0cyI6WyI1NjU2NmViOWJlZTg4MjE4M2MxNzUwNzAiLCI1NjU2NmU4YmJlZTg4MjE4M2MxNzUwNmUiLCI1NjU2NmU1YmJlZTg4MjE4M2MxNzUwNjYiXSwiY291bnRyaWVzVmlzaXRlZCI6WyI1NjU2NjBlMWJlOTc0M2E5NDk4ZWRkNjMiXSwiY291bnRyaWVzVG9WaXNpdCI6WyI1NjU2NjBiOGJlOTc0M2E5NDk4ZWRkNjAiXSwiZGVzY3JpcHRpb24iOlsiU29tZSBkZXNjcmlwdGlvbiBhYm91dCBtZSJdLCJjdXJyZW50UG9zaXRpb24iOltdLCJwcm9maWxlUGhvdG9zIjpbXX0.nYIm186irwB1x2nYC8OzPDOr6JflzOiYle4X2x3WXR0
+Cache-Control: no-cache
+```
+
+  Response
+
+```js
+[
+    {
+        "_id": "5660cc4031cee6f980b97f38",
+        "_createdAt": "2015-12-03T23:12:00.706Z",
+        "_updatedAt": "2015-12-03T23:12:00.706Z",
+        "from": "56569334954f75212231ad41",
+        "to": "565f1a7af386ddd84bf764aa",
+        "phrase":"566223d73f6ee968b8cb7982",
+        "__v": 0
+    },
+    {
+        "_id": "5660cc3331cee6f980b97f37",
+        "_createdAt": "2015-12-03T23:11:47.990Z",
+        "_updatedAt": "2015-12-03T23:11:47.990Z",
+        "from": "56569334954f75212231ad41",
+        "to": "565f1a7af386ddd84bf764aa",
+        "emoticon":"U+1F601",
+        "__v": 0
+    },
+    {
+        "_id": "5660cc1531cee6f980b97f35",
+        "_createdAt": "2015-12-03T23:11:17.897Z",
+        "_updatedAt": "2015-12-03T23:11:17.897Z",
+        "from": "56569334954f75212231ad41",
+        "to": "565f1a7af386ddd84bf764aa",
+        "event": "565cfa8dc2e649e9dbb29894",
+        "__v": 0
+    }
+]
+```
+
+### Get Conversation by userId
+
+```js
+GET /conversations/find-one?where[user]=565f1a7af386ddd84bf764aa&limit=10&offset=0 HTTP/1.1
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzNDk1NGY3NTIxMjIzMWFkNDEiLCJlbWFpbCI6InNhbnRpYWdvQGtvbmFjbG91ZC5pbyIsIl9fdiI6MCwiYmlydGhQbGFjZSI6eyJuYW1lIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsImNvdW50cnlDb2RlIjoiVVkifSwicHJvZmlsZUltYWdlVXJsIjoiYnVja2V0LzU2NTY5NTlhZjY2MDE0N2UzNGQxYmE0ZSIsImJpcnRoZGF5IjoiMTk4OS0wNi0yMFQwMDowMDowMC4wMDBaIiwiY3VycmVudFBsYWNlIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsInN0YXR1cyI6IlZBQ0FUSU9OUyIsImN1cnJlbnRIb3N0ZWwiOiI1NjU2YjU0OWJlZTg4MjE4M2MxNzUwNzYiLCJuYW1lIjoiU2FudGlhZ28gQ290dG8iLCJmYXZvdXJpdGVSZWNvbW1lbmRlZCI6W10sImZhdm91cml0ZUV2ZW50cyI6W10sImludGVyZXN0cyI6WyI1NjU2NmViOWJlZTg4MjE4M2MxNzUwNzAiLCI1NjU2NmU4YmJlZTg4MjE4M2MxNzUwNmUiLCI1NjU2NmU1YmJlZTg4MjE4M2MxNzUwNjYiXSwiY291bnRyaWVzVmlzaXRlZCI6WyI1NjU2NjBlMWJlOTc0M2E5NDk4ZWRkNjMiXSwiY291bnRyaWVzVG9WaXNpdCI6WyI1NjU2NjBiOGJlOTc0M2E5NDk4ZWRkNjAiXSwiZGVzY3JpcHRpb24iOlsiU29tZSBkZXNjcmlwdGlvbiBhYm91dCBtZSJdLCJjdXJyZW50UG9zaXRpb24iOltdLCJwcm9maWxlUGhvdG9zIjpbXX0.Z7oZw6VqhYeICzgNxOUQk01ZomRk8yw0C42891p73QI
 Cache-Control: no-cache
 ```
 
