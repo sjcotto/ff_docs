@@ -782,19 +782,19 @@ Cache-Control: no-cache
          -56.15034220000001
       ],
       "usersGoing": 1,
-			"users": [
-				{
-				  "_id": "56569334954f75212231ad41",
-				  "email": "santiago@konacloud.io",
-				  "birthPlace": {
-				  "name": "Montevideo, Uruguay",
-				  "countryCode": "UY"
-				},
-				  "profileImageUrl": "bucket/5656959af660147e34d1ba4e",
-				  "birthday": "1989-06-20T00:00:00.000Z",
-				  "name": "Santiago Cotto"
-				}
-			] 
+      "users": [
+		{
+			"_id": "56569334954f75212231ad41",
+			"email": "santiago@konacloud.io",
+			"birthPlace": {
+			    "name": "Montevideo, Uruguay",
+			    "countryCode": "UY"
+		        },
+			"profileImageUrl": "bucket/5656959af660147e34d1ba4e",
+			"birthday": "1989-06-20T00:00:00.000Z",
+			"name": "Santiago Cotto"
+		}
+	] 
    },
    {  
       "_id":"565cfa67c2e649e9dbb29892",
@@ -824,61 +824,19 @@ Cache-Control: no-cache
          -56.15034220000001
       ],
       "usersGoing": 1,
-			"users": [
-				{
-				  "_id": "56569334954f75212231ad41",
-				  "email": "santiago@konacloud.io",
-				  "birthPlace": {
-				  "name": "Montevideo, Uruguay",
-				  "countryCode": "UY"
-				},
-				  "profileImageUrl": "bucket/5656959af660147e34d1ba4e",
-				  "birthday": "1989-06-20T00:00:00.000Z",
-				  "name": "Santiago Cotto"
-				}
-			]
-   },
-   {  
-      "_id":"565cea615876c39f334f8765",
-      "_createdAt":"2015-12-01T00:31:29.411Z",
-      "_updatedAt":"2015-12-01T00:31:29.411Z",
-      "name":"Some Event",
-      "startTime":"02:00",
-      "endTime":"03:00",
-      "address":"abadie y benito blano",
-      "creditCard":true,
-      "english":false,
-      "age":"ALL",
-      "picture":"bucket/565cea2ec2d09c69317694a7",
-      "category":"565ce180c8e51cf84c38f9a0",
-      "description":"The coolest event",
-      "website":"cool.event",
-      "country":"565660b8be9743a9498edd60",
-      "city":"5656b4d1bee882183c175072",
-      "zone":"565bbc9c3f6ad1fc51a7bfb3",
-      "startDate":"2015-11-20T00:00:00.000Z",
-      "price":"3",
-      "priceNotes":"Some price",
-      "__v":0,
-      "endDate":"2015-11-26T00:00:00.000Z",
-      "location":[  
-         -34.917235,
-         -56.15034220000001
-      ],
-      "usersGoing": 1,
-			"users": [
-				{
-				  "_id": "56569334954f75212231ad41",
-				  "email": "santiago@konacloud.io",
-				  "birthPlace": {
-				  "name": "Montevideo, Uruguay",
-				  "countryCode": "UY"
-				},
-				  "profileImageUrl": "bucket/5656959af660147e34d1ba4e",
-				  "birthday": "1989-06-20T00:00:00.000Z",
-				  "name": "Santiago Cotto"
-				}
-			]
+      "users": [
+		{
+			"_id": "56569334954f75212231ad41",
+			"email": "santiago@konacloud.io",
+			"birthPlace": {
+			    "name": "Montevideo, Uruguay",
+			    "countryCode": "UY"
+		        },
+			"profileImageUrl": "bucket/5656959af660147e34d1ba4e",
+			"birthday": "1989-06-20T00:00:00.000Z",
+			"name": "Santiago Cotto"
+		}
+	] 
    }
 ]
 ```
