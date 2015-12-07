@@ -601,7 +601,6 @@ Cache-Control: no-cache
         "name": "Paris",
         "picture": "bucket/565a154e1585573b639023ea",
         "price": "1",
-        "peopleGoing": 4,
         "days": [
             {
                 "name": "Lunes",
@@ -677,7 +676,6 @@ Cache-Control: no-cache
         "name": "Brickell",
         "picture": "bucket/565a14a07bbcc7f05b1f6fd5",
         "price": "1",
-        "peopleGoing": 4,
         "days": [
             {
                 "name": "Lunes",
@@ -781,8 +779,8 @@ Cache-Control: no-cache
          -34.917235,
          -56.15034220000001
       ],
-      "usersGoing": 1,
-      "users": [
+      "peopleGoing": 1,
+      "people": [
 		{
 			"_id": "56569334954f75212231ad41",
 			"email": "santiago@konacloud.io",
@@ -823,8 +821,8 @@ Cache-Control: no-cache
          -34.917235,
          -56.15034220000001
       ],
-      "usersGoing": 1,
-      "users": [
+      "peopleGoing": 1,
+      "people": [
 		{
 			"_id": "56569334954f75212231ad41",
 			"email": "santiago@konacloud.io",
