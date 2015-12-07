@@ -1,4 +1,4 @@
-# FF APIs
+# FlipFlop APIs
 
 ## Endpoints
 
