@@ -1510,7 +1510,7 @@ Cache-Control: no-cache
 find places with name like  **monte**
 
 ```js
-GET /cities?where[name][$options]=i&where[name][$regex]=monte
+GET /cities?where[name][$options]=i&limit=20&where[name][$regex]=monte
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
 ```
