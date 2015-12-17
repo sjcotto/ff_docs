@@ -1493,3 +1493,108 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzNDk1NGY3NTIxMjIzMWFkNDEiLCJlbWFpbCI6InNhbnRpYWdvQGtvbmFjbG91ZC5pbyIsIl9fdiI6MCwiYmlydGhQbGFjZSI6eyJuYW1lIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsImNvdW50cnlDb2RlIjoiVVkifSwicHJvZmlsZUltYWdlVXJsIjoiYnVja2V0LzU2NTY5NTlhZjY2MDE0N2UzNGQxYmE0ZSIsImJpcnRoZGF5IjoiMTk4OS0wNi0yMFQwMDowMDowMC4wMDBaIiwiY3VycmVudFBsYWNlIjoiTW9udGV2aWRlbywgVXJ1Z3VheSIsInN0YXR1cyI6IlZBQ0FUSU9OUyIsImN1cnJlbnRIb3N0ZWwiOiI1NjU2YjU0OWJlZTg4MjE4M2MxNzUwNzYiLCJuYW1lIjoiU2FudGlhZ28gQ290dG8iLCJmYXZvdXJpdGVSZWNvbW1lbmRlZCI6W10sImZhdm91cml0ZUV2ZW50cyI6W10sImludGVyZXN0cyI6WyI1NjU2NmViOWJlZTg4MjE4M2MxNzUwNzAiLCI1NjU2NmU4YmJlZTg4MjE4M2MxNzUwNmUiLCI1NjU2NmU1YmJlZTg4MjE4M2MxNzUwNjYiXSwiY291bnRyaWVzVmlzaXRlZCI6WyI1NjU2NjBlMWJlOTc0M2E5NDk4ZWRkNjMiXSwiY291bnRyaWVzVG9WaXNpdCI6WyI1NjU2NjBiOGJlOTc0M2E5NDk4ZWRkNjAiXSwiZGVzY3JpcHRpb24iOlsiU29tZSBkZXNjcmlwdGlvbiBhYm91dCBtZSJdLCJjdXJyZW50UG9zaXRpb24iOltdLCJwcm9maWxlUGhvdG9zIjpbXX0.Z7oZw6VqhYeICzgNxOUQk01ZomRk8yw0C42891p73QI
 Cache-Control: no-cache
 ```
+
+
+## Destinations
+
+### Places Autocomplete
+
+find places with name like  **monte**
+
+```js
+GET /cities?where[name][$options]=i&where[name][$regex]=monte
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+```
+
+Response
+
+```
+[  
+   {  
+      "_id":"56720b113f6ee968b8cb88c5",
+      "country":"5670cfe73ebc0aa00579ffbf",
+      "name":"Montevideo",
+      "_updatedAt":"2015-12-17T01:52:33.690Z",
+      "__v":0
+   },
+   {  
+      "_id":"56720a013f6ee968b8cb8840",
+      "country":"5670cfe73ebc0aa00579ff48",
+      "name":"Montepulciano",
+      "_updatedAt":"2015-12-17T01:52:33.820Z",
+      "__v":0
+   }
+...
+]
+```
+
+### Add Destination
+
+POST /destinations HTTP/1.1
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfX3YiOjAsIl9jcmVhdGVkQXQiOiIyMDE1LTEyLTE3VDAxOjU0OjI1LjU3N1oiLCJfdXBkYXRlZEF0IjoiMjAxNS0xMi0xN1QwMTo1NDoyNS41NzdaIiwiZW1haWwiOiJzYW50aWFnb0Brb25hY2xvdWQuaW8iLCJfaWQiOiI1NjcyMTVkMTJiODdiNmMwMGNkYmUyMTQiLCJmcmllbmRzIjpbXSwiZmF2b3VyaXRlUmVjb21tZW5kZWQiOltdLCJmYXZvdXJpdGVFdmVudHMiOltdLCJpbnRlcmVzdHMiOltdLCJjb3VudHJpZXNWaXNpdGVkIjpbXSwiY291bnRyaWVzVG9WaXNpdCI6W10sImN1cnJlbnRQb3NpdGlvbiI6W10sInByb2ZpbGVQaG90b3MiOltdfQ.ekj9KAbJIaJ2zzQH01qhLUgko-FuhgYniZyhSZbgQ8k
+Cache-Control: no-cache
+
+{
+  "city" : "56720b113f6ee968b8cb88c5",
+  "from" : "2015-12-25",
+  "to" : "2015-12-28"
+}
+```
+
+### Get my destinations countries
+
+```js
+GET /destinations/countries
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfX3YiOjAsIl9jcmVhdGVkQXQiOiIyMDE1LTEyLTE3VDAxOjU0OjI1LjU3N1oiLCJfdXBkYXRlZEF0IjoiMjAxNS0xMi0xN1QwMTo1NDoyNS41NzdaIiwiZW1haWwiOiJzYW50aWFnb0Brb25hY2xvdWQuaW8iLCJfaWQiOiI1NjcyMTVkMTJiODdiNmMwMGNkYmUyMTQiLCJmcmllbmRzIjpbXSwiZmF2b3VyaXRlUmVjb21tZW5kZWQiOltdLCJmYXZvdXJpdGVFdmVudHMiOltdLCJpbnRlcmVzdHMiOltdLCJjb3VudHJpZXNWaXNpdGVkIjpbXSwiY291bnRyaWVzVG9WaXNpdCI6W10sImN1cnJlbnRQb3NpdGlvbiI6W10sInByb2ZpbGVQaG90b3MiOltdfQ.ekj9KAbJIaJ2zzQH01qhLUgko-FuhgYniZyhSZbgQ8k
+Cache-Control: no-cache
+```
+
+Response
+
+```js
+[
+    {
+        "_id": "5670cfe73ebc0aa00579ffbf",
+        "_createdAt": "2015-12-16T02:43:51.347Z",
+        "_updatedAt": "2015-12-16T02:43:51.347Z",
+        "name": "Uruguay",
+        "countryCode": "UY",
+        "__v": 0
+    }
+]
+```
+
+### Get my destinations by country
+
+```
+GET /destinations?where[country]=5670cfe73ebc0aa00579ffbf
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfX3YiOjAsIl9jcmVhdGVkQXQiOiIyMDE1LTEyLTE3VDAxOjU0OjI1LjU3N1oiLCJfdXBkYXRlZEF0IjoiMjAxNS0xMi0xN1QwMTo1NDoyNS41NzdaIiwiZW1haWwiOiJzYW50aWFnb0Brb25hY2xvdWQuaW8iLCJfaWQiOiI1NjcyMTVkMTJiODdiNmMwMGNkYmUyMTQiLCJmcmllbmRzIjpbXSwiZmF2b3VyaXRlUmVjb21tZW5kZWQiOltdLCJmYXZvdXJpdGVFdmVudHMiOltdLCJpbnRlcmVzdHMiOltdLCJjb3VudHJpZXNWaXNpdGVkIjpbXSwiY291bnRyaWVzVG9WaXNpdCI6W10sImN1cnJlbnRQb3NpdGlvbiI6W10sInByb2ZpbGVQaG90b3MiOltdfQ.ekj9KAbJIaJ2zzQH01qhLUgko-FuhgYniZyhSZbgQ8k
+Cache-Control: no-cache
+```
+
+Response
+
+```
+[
+    {
+        "_id": "567216b096db43c80cb818f7",
+        "_createdAt": "2015-12-17T01:58:08.633Z",
+        "_updatedAt": "2015-12-17T01:58:08.633Z",
+        "country": "5670cfe73ebc0aa00579ffbf",
+        "user": "567215d12b87b6c00cdbe214",
+        "city": "56720b113f6ee968b8cb88c5",
+        "from": "2015-12-25T00:00:00.000Z",
+        "to": "2015-12-28T00:00:00.000Z",
+        "__v": 0
+    }
+]
+```
+
+
