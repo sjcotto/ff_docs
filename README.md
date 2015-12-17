@@ -1509,7 +1509,7 @@ Content-Type: application/json
 
 Response
 
-```
+```js
 [  
    {  
       "_id":"56720b113f6ee968b8cb88c5",
@@ -1531,6 +1531,7 @@ Response
 
 ### Add Destination
 
+```js
 POST /destinations HTTP/1.1
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1571,7 +1572,7 @@ Response
 
 ### Get my destinations by country
 
-```
+```js
 GET /destinations?where[country]=5670cfe73ebc0aa00579ffbf
 Host: flipflop.dev.konabackend.com
 Content-Type: application/json
@@ -1581,14 +1582,13 @@ Cache-Control: no-cache
 
 Response
 
-```
+```js
 [
     {
         "_id": "567216b096db43c80cb818f7",
         "_createdAt": "2015-12-17T01:58:08.633Z",
         "_updatedAt": "2015-12-17T01:58:08.633Z",
         "country": "5670cfe73ebc0aa00579ffbf",
-        "user": "567215d12b87b6c00cdbe214",
         "city": "56720b113f6ee968b8cb88c5",
         "from": "2015-12-25T00:00:00.000Z",
         "to": "2015-12-28T00:00:00.000Z",
