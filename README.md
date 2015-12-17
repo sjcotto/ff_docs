@@ -1294,7 +1294,11 @@ Cache-Control: no-cache
 
 {  
    "to":"565f1a7af386ddd84bf764aa",
-   "event":"565cfa8dc2e649e9dbb29894"
+   "event":"565cfa8dc2e649e9dbb29894",
+   "data" : {
+   	"meetingTime" : "10:00",
+   	"meetingPoint" : "Bar"
+   }
 }
 ```
 
@@ -1309,7 +1313,11 @@ Cache-Control: no-cache
 
 {  
    "to":"565f1a7af386ddd84bf764aa",
-   "location":"565f3027f386ddd84bf764b4"
+   "location":"565f3027f386ddd84bf764b4",
+   "data" : {
+   	"meetingTime" : "10:00",
+   	"meetingPoint" : "Bar"
+   }
 }
 ```
 
