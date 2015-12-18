@@ -1669,14 +1669,54 @@ Response
 ```js
 [
     {
-        "_id": "567216b096db43c80cb818f7",
-        "_createdAt": "2015-12-17T01:58:08.633Z",
-        "_updatedAt": "2015-12-17T01:58:08.633Z",
-        "country": "5670cfe73ebc0aa00579ffbf",
-        "city": "56720b113f6ee968b8cb88c5",
+        "_id": "5673328a4ebd932945cf4bf4",
+        "_createdAt": "2015-12-17T22:09:14.733Z",
+        "_updatedAt": "2015-12-17T22:09:14.733Z",
+        "country": {
+            "_id": "5670cfe73ebc0aa00579ffbf",
+            "_createdAt": "2015-12-16T02:43:51.347Z",
+            "_updatedAt": "2015-12-16T02:43:51.347Z",
+            "name": "Uruguay",
+            "countryCode": "UY",
+            "__v": 0
+        },
+        "user": "567215d12b87b6c00cdbe214",
+        "to": "2015-12-19T00:00:00.000Z",
+        "city": {
+            "_id": "56720b113f6ee968b8cb88c5",
+            "country": "5670cfe73ebc0aa00579ffbf",
+            "name": "Montevideo",
+            "_updatedAt": "2015-12-17T01:52:33.690Z",
+            "__v": 0
+        },
+        "from": "2015-12-17T00:00:00.000Z",
+        "__v": 0,
+        "picture": "https://farm6.staticflickr.com/5731/23533632880_fffece1de2.jpg"
+    },
+    {
+        "_id": "5672f8e4a2a5dcf20e803a29",
+        "_createdAt": "2015-12-17T18:03:16.104Z",
+        "_updatedAt": "2015-12-17T18:03:16.104Z",
+        "country": {
+            "_id": "5670cfe73ebc0aa00579ffbf",
+            "_createdAt": "2015-12-16T02:43:51.347Z",
+            "_updatedAt": "2015-12-16T02:43:51.347Z",
+            "name": "Uruguay",
+            "countryCode": "UY",
+            "__v": 0
+        },
+        "user": "567215d12b87b6c00cdbe214",
+        "city": {
+            "_id": "56720b113f6ee968b8cb88c5",
+            "country": "5670cfe73ebc0aa00579ffbf",
+            "name": "Montevideo",
+            "_updatedAt": "2015-12-17T01:52:33.690Z",
+            "__v": 0
+        },
         "from": "2015-12-25T00:00:00.000Z",
         "to": "2015-12-28T00:00:00.000Z",
-        "__v": 0
+        "__v": 0,
+        "picture": "https://farm1.staticflickr.com/730/23201225274_38ed7f4882.jpg"
     }
 ]
 ```
