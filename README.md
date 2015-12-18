@@ -1239,7 +1239,7 @@ Cache-Control: no-cache
 
 Response
 
-```
+```js
 [
     {
         "_id": "5670d7b76411920c1b074d40",
