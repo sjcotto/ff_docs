@@ -1226,6 +1226,78 @@ Cache-Control: no-cache
 ]
 ```
 
+
+### Get nearby users
+
+```js
+GET /users/nearby HTTP/1.1
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjcwZDdiNzY0MTE5MjBjMWIwNzRkNDAiLCJfY3JlYXRlZEF0IjoiMjAxNS0xMi0xNlQwMzoxNzoxMS41MzFaIiwiX3VwZGF0ZWRBdCI6IjIwMTUtMTItMTZUMDM6MTc6MTEuNTMxWiIsImVtYWlsIjoiaGVybmFuQHRlYW1rb25hLmlvIiwiX192IjowLCJuYW1lIjoiSGVybmFuIiwiYmlydGhQbGFjZSI6eyJuYW1lIjoiTW9udGV2aWRlbywgTW9udGV2aWRlbyBEZXBhcnRtZW50LCBVcnVndWF5IiwiY291bnRyeUNvZGUiOiJVWSJ9LCJiaXJ0aGRheSI6IjE5ODktMTItMTZUMDA6MDA6MDAuMDAwWiIsImhvd1RyYXZlbCI6IkFMT05FIiwicHJvZmlsZUltYWdlVXJsIjoiYnVja2V0LzU2NzFiYWE0ODIzMDM4MzEzMDU4YTlmNyIsImdlbmRlciI6Ik0iLCJjdXJyZW50UGxhY2UiOiJNb250ZXZpZGVvLCBNb250ZXZpZGVvIERlcGFydG1lbnQsIFVydWd1YXkiLCJjdXJyZW50SG9zdGVsIjoiNTY1NmI1NDliZWU4ODIxODNjMTc1MDc2IiwiZGVzY3JpcHRpb24iOiJIZXJuYW4iLCJzdGF0dXMiOiJWQUNBVElPTlMiLCJmcmllbmRzIjpbXSwiZmF2b3VyaXRlUmVjb21tZW5kZWQiOltdLCJmYXZvdXJpdGVFdmVudHMiOltdLCJpbnRlcmVzdHMiOlsiNTY1NjZlNWJiZWU4ODIxODNjMTc1MDY2IiwiNTY1NjZlMzBiZWU4ODIxODNjMTc1MDYwIiwiNTY1NjZlODJiZWU4ODIxODNjMTc1MDZjIl0sImNvdW50cmllc1Zpc2l0ZWQiOlsiNTY3MGNmZTczZWJjMGFhMDA1NzlmZmJlIiwiNTY3MGNmZTczZWJjMGFhMDA1NzlmZjJhIiwiNTY3MGNmZTczZWJjMGFhMDA1NzlmZmJmIl0sImNvdW50cmllc1RvVmlzaXQiOlsiNTY3MGNmZTczZWJjMGFhMDA1NzlmZWVlIl0sImN1cnJlbnRQb3NpdGlvbiI6WyIzNy4zMzIzMzEiLCItMTIyLjAzMTIxOSJdLCJwcm9maWxlUGhvdG9zIjpbXX0.zESQOefZliHpAD-a6pJPqIh-O_NtVMAkrgX2kLaIANQ
+Cache-Control: no-cache
+```
+
+Response
+
+```
+[
+    {
+        "_id": "5670d7b76411920c1b074d40",
+        "email": "hernan@teamkona.io",
+        "currentPosition": [
+            37.332331,
+            -60.031219
+        ],
+        "name": "Hernan",
+        "birthPlace": {
+            "countryCode": "UY",
+            "name": "Montevideo, Montevideo Department, Uruguay"
+        },
+        "birthday": "1989-12-16T00:00:00.000Z",
+        "howTravel": "ALONE",
+        "profileImageUrl": "bucket/5671baa4823038313058a9f7",
+        "age": 26,
+        "distance": 0
+    },
+    {
+        "_id": "5670d92e3f6ee968b8cb79d2",
+        "email": "hernanalbano@gmail.com",
+        "name": "Hernán Albano",
+        "birthPlace": {
+            "countryCode": "UY",
+            "name": "Montevideo, Montevideo Department, Uruguay"
+        },
+        "birthday": "2015-12-16T00:00:00.000Z",
+        "howTravel": "ALONE",
+        "profileImageUrl": "bucket/5671ddb39570fe1f2b6d9d2f",
+        "currentPosition": [
+            37.332331,
+            -60.031219
+        ],
+        "age": 0,
+        "distance": 0
+    },
+    {
+        "_id": "5672ff0781c11a1754debb2e",
+        "email": "gonzalo@teamkona.io",
+        "currentPosition": [
+            37.332331,
+            -60.031219
+        ],
+        "howTravel": "FAMILY",
+        "birthPlace": {
+            "name": "Melo, Cerro Largo, Uruguay",
+            "countryCode": "UY"
+        },
+        "profileImageUrl": "bucket/5672ff3181c11a1754debb2f",
+        "birthday": "1989-08-17T00:00:00.000Z",
+        "name": "GMELO",
+        "age": 26,
+        "distance": 0
+    }
+]
+```
+
 ### Get phrases
 
 ```
