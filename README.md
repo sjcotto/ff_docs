@@ -559,10 +559,14 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjU2OTMzN
 Cache-Control: no-cache
 
 { 
-  "currentPosition" : [-34.9071263, -56.1956573]
+  "currentPosition" : [-56.1956573, -34.9071263]
 }
 
 ```
+
+{ 
+  "currentPosition" : [longitude, latitude]
+}
 
 ## Home
 
