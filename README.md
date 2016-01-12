@@ -588,6 +588,18 @@ Respose
 }
 ```
 
+## Forgot password
+
+```js
+POST /users/forgot-password HTTP/1.1
+Host: flipflop.dev.konabackend.com
+Content-Type: application/json
+Cache-Control: no-cache
+
+{ "email": "tin.isasa@gmail.com" }
+
+```
+
 ## Locations (Recommended)
 
 ### Get locations
